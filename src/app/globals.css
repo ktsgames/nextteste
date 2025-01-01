@@ -1,19 +1,48 @@
+/* Reset de margens e paddings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
+/* Estilo do body */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f1f1f6;
   color: rgb(15, 14, 14);
   display: flex;
   min-height: 100vh;
+  flex-direction: column; /* Para garantir que a altura mínima seja respeitada */
 }
 
+/* Estilo principal da aplicação */
 .App {
   display: flex;
+  flex-direction: column; /* Ajuste o layout para telas menores */
+  width: 100%;
 }
 
+/* Exemplo de responsividade */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column; /* Alinha os elementos verticalmente em telas pequenas */
+    padding: 10px; /* Adiciona algum espaço interno nas telas pequenas */
+  }
+
+  .App {
+    flex-direction: column; /* Garante que a aplicação seja flexível em telas pequenas */
+  }
+}
+
+/* Outras personalizações podem ser feitas para ajustar ainda mais o layout */
+
+/* Exemplo de texto responsivo */
+h1 {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem; /* Menor tamanho de fonte em telas pequenas */
+  }
+}

@@ -1,3 +1,23 @@
+/* Reset e estilo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f1f6;
+  color: rgb(15, 14, 14);
+  display: flex;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+}
+
+/* Estilos do menu lateral (para desktop) */
 .container {
   position: fixed;
   top: 0;
@@ -88,16 +108,18 @@
   color: #ff5722;
 }
 
-/* Responsividade */
+/* Responsividade: Ajustes para telas menores */
 
 @media (max-width: 768px) {
+  /* Em telas menores que 768px, o menu lateral se torna um menu de topo */
   .container {
     position: sticky;
     top: 0;
     width: 100%;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     border-right: none;
+    padding: 10px 20px;
   }
 
   .container h2 {
@@ -115,17 +137,31 @@
 
   .container button {
     max-width: 100%;
+    font-size: 14px;
   }
 
+  /* Ajustes nos ícones */
   .icons {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .icons i {
     font-size: 16px;
   }
 }
 
+/* Responsividade para dispositivos móveis muito pequenos */
 @media (max-width: 480px) {
   .container {
     width: 100%;
     padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .img {
@@ -142,14 +178,14 @@
   }
 
   .icons {
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  height: 100%; /* Certifique-se de definir uma altura para o contêiner */
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
 
-.icons i {
-  font-size: 14px;
-}
-
+  .icons i {
+    font-size: 14px;
+  }
 }
