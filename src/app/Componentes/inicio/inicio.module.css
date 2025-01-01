@@ -1,0 +1,103 @@
+.content {
+    margin-left: 250px; /* Para o menu lateral */
+    padding: 0px;
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+    text-align: center;
+
+  }
+  
+  /* Para telas menores que 768px */
+  @media (max-width: 768px) {
+    .content {
+      margin-left: 0;
+      margin-top: 60px; /* Espaço para o menu superior */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .content {
+      margin-top: 60px; /* Para telas pequenas */
+    }
+  }
+  .img {
+    width: 100%; /* A imagem ocupará toda a largura do contêiner */
+    height: 100%; /* A imagem ocupará toda a altura do contêiner */
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner */
+    display: block; /* Remove qualquer espaçamento causado por inline-block */
+    
+    position: absolute;
+  }
+  
+  
+    .content h1 {
+      
+      font-size: 71;
+      position: absolute;
+      color: #e6e7ff;
+      left: 46.6%;
+      bottom: 65%;
+  }
+  
+
+  .content button {
+    border-radius: 30px;
+    font-size: 30;
+    color: #ff8127;
+    border: 5px solid #ff8127;
+    position: absolute;
+    left: 51.9%;
+    bottom: 20%;
+    
+  }
+
+  
+.blocotexto {
+    position: absolute;
+    left: 40%;
+    bottom: 55%;
+}
+
+
+  
+  .typewriter {
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    font-size: 41px; /* Tamanho do texto */
+    font-family: 'Courier New', Courier, monospace; /* Fonte estilo máquina de escrever */
+    white-space: nowrap; /* Impede quebra de linha */
+    overflow: hidden; /* Oculta o texto excedente */
+    border-right: 2px solid white; /* Barra animada ao final do texto */
+    width: 0; /* Largura inicial do texto */
+    animation: typing 9s steps(305, end) infinite, blink 0.9s step-end infinite;
+  }
+ 
+
+  @keyframes typing {
+    0% {
+      width: 0; /* Início com largura 0 */
+    }
+    70% {
+      width: 18.1ch; /* Largura total do texto no ponto de digitação completa */
+    }
+    100% {
+      width: 18.1ch; /* Reinicia o texto */
+    }
+  }
+  
+  @keyframes blink {
+    from {
+      border-color: transparent;
+    }
+    to {
+      border-color: white;
+    }
+  }
+  
+
+
+
+
+
+  

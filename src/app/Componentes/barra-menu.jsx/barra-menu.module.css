@@ -1,0 +1,155 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #000019;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  border-right: 2px solid #444;
+  transition: all 0.3s ease-in-out;
+}
+
+.img {
+  border-radius: 50%;
+  border: 9px solid rgb(15, 41, 63);
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.container h2 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.containerLink {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.links {
+  font-size: 14pt;
+  color: #b0a6ad;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.links:hover {
+  color: #f33c18;
+}
+
+.container button {
+  background-color: #f33c18;
+  width: 100%;
+  max-width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container button:hover {
+  background-color: #ff5722;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 10px;
+  justify-items: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.icons i {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icons i:hover {
+  color: #ff5722;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+  .container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    border-right: none;
+  }
+
+  .container h2 {
+    font-size: 14px;
+  }
+
+  .img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .links {
+    font-size: 12pt;
+  }
+
+  .container button {
+    max-width: 100%;
+  }
+
+  .icons {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .container h2 {
+    font-size: 12px;
+  }
+
+  .container button {
+    font-size: 14px;
+  }
+
+  .icons {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100%; /* Certifique-se de definir uma altura para o contêiner */
+}
+
+.icons i {
+  font-size: 14px;
+}
+
+}

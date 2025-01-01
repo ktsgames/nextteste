@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f1f6;
+  color: rgb(15, 14, 14);
+  display: flex;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+}
+
